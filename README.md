@@ -1,0 +1,1 @@
+An exercise in creating a Drupal module
