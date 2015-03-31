@@ -1,0 +1,24 @@
+<?php
+
+// Enables page callback
+function calculate_menu()
+{
+	$urls = array();
+	$urls["calculate/add_me"] = array(
+		"title" => "Add me",
+		"page callback" => "calculate_me",
+		"access callback" => true
+	);
+	return $urls;
+}
+
+// Creates calculate/add_me page -- test that module created an element
+function calculate_me()
+{
+	$display = array();
+	$display["element"] = array(
+		"#tag" => "h1",
+		"#value" => "I will turn into a calculating form soon..."
+	);
+	return theme_html_tag($display);	
+}
